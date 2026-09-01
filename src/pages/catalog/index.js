@@ -1,0 +1,1 @@
+export { CatalogPage as Component} from './ui/CatalogPage.jsx';

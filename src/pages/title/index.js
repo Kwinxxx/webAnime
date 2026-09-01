@@ -1,0 +1,1 @@
+export { TitlePage as Component } from './ui/TitlePage.jsx';
