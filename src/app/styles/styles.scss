@@ -5,7 +5,14 @@
 * {
     color: vars.$color-text;
     font-weight: 400;
+    font-size: 14px;
 }
+
+
+body {
+    background-color: vars.$color-bg;
+}
+
 
 
 h1,

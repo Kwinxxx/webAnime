@@ -1,0 +1,29 @@
+@use '../../../../app/styles/vars.scss';
+
+.btn {
+    color: vars.$color-text;
+    background-color: vars.$color-accent;
+    padding: 9px 18px;
+    text-align: center;
+    border-radius: vars.$border-rad;
+    font-weight: 600;
+    transition: all vars.$transition-duration ease;
+
+    &:hover {
+        background-color: vars.$color-accent-hover;
+        transform: scale(vars.$value-scale);
+    }
+
+    &.disabled {
+        color: vars.$color-text-disabled;
+        background-color: vars.$color-card;
+        transform: none;
+        cursor: not-allowed;
+    }
+
+    &.secondary {
+        background-color: transparent;
+        border: vars.$border-weight solid vars.$color-border;
+    }
+}
+
