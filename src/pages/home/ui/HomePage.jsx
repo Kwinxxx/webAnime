@@ -1,14 +1,20 @@
-import { Button } from "../../../shared/ui/button/ui/Button"
-import { ProgressBar } from "../../../shared/ui/progress-bar"
+import { Card } from "../../../shared/ui/card/ui/Card"
+import { SkeletonCard } from "../../../shared/ui/skeleton-card/ui/SkeletonCard"
 
 export const HomePage = () => {
     return (
         <>
-            <div>HomePage</div>
-            <Button 
-            variant="primary"
-            >Кнопка</Button>
-            <ProgressBar />
+            <div style={{
+                display: 'grid',
+                gap: '8px',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 150px))'
+            }}>
+                <Card name='Lorem Ipsum is simply dumdsadasdasdasdas' series='2'/>
+                <Card name='Ванпис'/>
+                <Card name='Наруто' series='2'/>
+                <Card name='Ванпис'/>
+                <SkeletonCard />
+            </div>
         </>
     )
 }

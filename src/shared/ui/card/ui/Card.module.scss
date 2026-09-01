@@ -1,0 +1,52 @@
+@use '../../../../app/styles/vars.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    transition: all vars.$transition-duration ease;
+
+    &:hover {
+        transform: scale(vars.$value-scale);
+
+    }
+
+    &:active {
+        filter: brightness(0.4);
+        transform: scale(0.95);
+    }
+}
+
+.imgWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    margin-bottom: 8px;
+    background-color: vars.$color-card;
+    border-radius: 10px;
+}
+
+.cardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+}
+
+.hint {
+    color: vars.$color-text-hint;
+    font-size: 11px;
+}
+
+.progressWatch {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    right: 8px;
+}

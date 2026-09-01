@@ -13,7 +13,7 @@ export const ProgressBar = (props) => {
     const isCompleted = validPercentage >= 99;
 
     return (
-        <div className={` ${styles.track} ${className} `}>
+        <div className={` ${styles.track} ${className}`}>
             <div 
             className={`${styles.fill} ${isCompleted && styles.completed}`}
             style = {{width: `${validPercentage}%` }}
