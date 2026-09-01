@@ -1,4 +1,5 @@
 import { Button } from "../../../shared/ui/button/ui/Button"
+import { ProgressBar } from "../../../shared/ui/progress-bar"
 
 export const HomePage = () => {
     return (
@@ -7,6 +8,7 @@ export const HomePage = () => {
             <Button 
             variant="primary"
             >Кнопка</Button>
+            <ProgressBar />
         </>
     )
 }
