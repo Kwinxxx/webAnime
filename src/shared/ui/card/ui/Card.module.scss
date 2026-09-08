@@ -2,15 +2,6 @@
 @use '../../../../app/styles/mixins.scss';
 
 
-.btnCountinue {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: vars.$color-white;
-    border-radius: vars.$;
-}
-
-
 .wrapper {
     @include mixins.liquid-glass($blur: 20px, $radius: 30px);
 
@@ -19,18 +10,21 @@
     flex-direction: column;
     aspect-ratio: 3 / 4;
     overflow: hidden;
-    
 
     transition: all vars.$transition-duration ease;
 
     &:hover {
         transform: translateY(-10px);
 
+        .btnContinue {
+            transition: all vars.$transition-duration ease;
+            opacity: 1;
+        }
     }
 
     &:active {
         filter: brightness(0.4);
-        transform: scale(0.95);
+        transform: scale(0.98);
     }
 }
 
@@ -61,7 +55,7 @@
     padding: 20px 10px;
     background: linear-gradient(to bottom,
         transparent 0%,
-        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.2) 50%,
         rgba(0, 0, 0, 0.9) 100%,
         );
 }
@@ -92,4 +86,20 @@
     padding: 5px 10px;
     font-size: 14px;
     color: #57E9DD;
+    font-weight: 600;
+}
+
+.btnContinue {
+    opacity: 0;
+    position: absolute;
+    border-radius: 30px;
+    top: 40%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    gap: 5px;
+    transition: all vars.$transition-duration ease;
+
+    > svg {
+        max-width: 30px;
+    }
 }

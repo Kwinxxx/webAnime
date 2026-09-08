@@ -1,0 +1,76 @@
+@use '../../app/styles/mixins.scss';
+@use '../../app/styles/vars.scss';
+
+.headerWrapper {
+    @include mixins.liquid-glass($radius: 30px);
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+}
+
+.logoName {
+    font-size: 16px;
+    color: vars.$color-white;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.navElement {
+    display: -webkit-inline-flex;
+    color: vars.$color-white;
+    opacity: 34%;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 20px;
+    align-items: center;
+    border: 0.5px solid transparent;
+
+    &:hover {
+        @include mixins.liquid-glass();
+        box-shadow: 0 0 20px rgba($color: #53FFF1, $alpha: 0.13);
+        opacity: 100%;
+    }
+
+
+}
+
+.searchWrapper {
+    @include mixins.liquid-glass($radius: 20px, $blur: 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    gap: 5px;
+    box-shadow: none;
+
+    > svg {
+     max-width: 20px;
+     max-height: 20px;
+    }
+    > input {
+        color: vars.$color-white;
+        font-weight: 500;
+        font-size: 15px;
+        background-color: inherit;
+        &:focus {
+            outline: none;
+        }
+    }
+}

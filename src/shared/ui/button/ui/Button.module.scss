@@ -1,8 +1,11 @@
 @use '../../../../app/styles/vars.scss';
 
 .btn {
-    color: vars.$color-text;
-    background-color: vars.$color-accent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: vars.$color-black;
+    background-color: vars.$color-white;
     padding: 9px 18px;
     text-align: center;
     border-radius: vars.$border-rad;

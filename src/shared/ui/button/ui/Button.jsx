@@ -5,7 +5,8 @@ export const Button = (props) => {
     const {
         children,
         variant='primary',
-        type='button'
+        type='button',
+        classes=''
     } = props
 
     const variantClasses = {
@@ -16,7 +17,7 @@ export const Button = (props) => {
 
     return (
         <button 
-        className={` ${styles.btn} ${variantClasses[variant]} `}
+        className={` ${styles.btn} ${variantClasses[variant]} ${classes}`}
         type={type}
         >
             {children}

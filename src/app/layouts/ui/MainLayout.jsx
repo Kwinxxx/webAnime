@@ -1,9 +1,10 @@
+import { Header } from "../../../widgets/header"
 import { Outlet } from "react-router"
 
 export const MainLayout = () => {
     return (
         <>
-            <div>Header</div>
+            <Header />
             <main>
                 <Outlet />
             </main>
