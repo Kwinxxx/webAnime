@@ -1,6 +1,16 @@
 @use '../../../../app/styles/vars.scss';
 @use '../../../../app/styles/mixins.scss';
 
+
+.btnCountinue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: vars.$color-white;
+    border-radius: vars.$;
+}
+
+
 .wrapper {
     @include mixins.liquid-glass($blur: 20px, $radius: 30px);
 
@@ -12,8 +22,9 @@
     
 
     transition: all vars.$transition-duration ease;
+
     &:hover {
-        transform: scale(vars.$value-scale);
+        transform: translateY(-10px);
 
     }
 
@@ -66,4 +77,19 @@
     color: rgba($color: #888888, $alpha: 1);
     font-weight: 400;
     font-size: 12px;
+}
+
+.hint {
+    @include mixins.liquid-glass($blur: 20px, $radius: 30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #57E9DD;
 }
