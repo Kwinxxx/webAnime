@@ -4,17 +4,23 @@ import { SkeletonCard } from "../../../shared/ui/skeleton-card/ui/SkeletonCard"
 export const HomePage = () => {
     return (
         <>
-            <div style={{
-                display: 'grid',
-                gap: '8px',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 150px))'
-            }}>
-                <Card name='Lorem Ipsum is simply dumdsadasdasdasdas' series='2'/>
-                <Card name='Ванпис'/>
-                <Card name='Наруто' series='2'/>
-                <Card name='Ванпис'/>
-                <SkeletonCard />
-            </div>
+        <div style=
+            {{display: 'grid',
+            gap: '10px',
+            gridTemplateColumns: "repeat(4, 200px)",
+            alignItems: 'start',
+            justifyContent: 'center',
+            gridTemplateRows: "repeat(2, 300px)"
+        }}>
+            <Card name='Изгнанный читер-чародей наслаждается беззаботной второй жизнью: Я могу накладывать «очки усиления» не только на оружие, но и на что угодно, в любой момент отменяя эффект по собственной воле, а с теми, кто остался, всё нормально?'/>
+            <Card name='Магическая Битва'/>
+            <Card name='Магическая Битва'/>
+            <Card name='Магическая Битва'/>
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+        </div>
         </>
     )
 }

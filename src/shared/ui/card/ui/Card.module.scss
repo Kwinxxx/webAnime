@@ -1,10 +1,17 @@
 @use '../../../../app/styles/vars.scss';
+@use '../../../../app/styles/mixins.scss';
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    transition: all vars.$transition-duration ease;
+    @include mixins.liquid-glass($blur: 20px, $radius: 30px);
 
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    
+
+    transition: all vars.$transition-duration ease;
     &:hover {
         transform: scale(vars.$value-scale);
 
@@ -16,37 +23,47 @@
     }
 }
 
-.imgWrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 2 / 3;
-    margin-bottom: 8px;
-    background-color: vars.$color-card;
-    border-radius: 10px;
-}
 
 .cardImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .cardName {
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    width: 80%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    max-height: calc(1.3rem * 2.5);
 }
 
-.hint {
-    color: vars.$color-text-hint;
-    font-size: 11px;
-}
-
-.progressWatch {
+.overlay {
     position: absolute;
-    bottom: 10px;
-    width: 90%;
-    right: 8px;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 10px;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.9) 100%,
+        );
+}
+
+.titleInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cardGenre {
+    color: rgba($color: #888888, $alpha: 1);
+    font-weight: 400;
+    font-size: 12px;
 }

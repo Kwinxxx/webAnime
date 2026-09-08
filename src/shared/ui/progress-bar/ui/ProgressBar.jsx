@@ -14,10 +14,9 @@ export const ProgressBar = (props) => {
 
     return (
         <div className={` ${styles.track} ${className}`}>
-            <div 
-            className={`${styles.fill} ${isCompleted && styles.completed}`}
-            style = {{width: `${validPercentage}%` }}
-            />
+            <div className={`${styles.fill} ${isCompleted && styles.completed}`} style = {{width: `${validPercentage}%` }}>
+                <div className={styles.check}></div>
+            </div>
         </div>
     )
 }

@@ -1,40 +1,41 @@
 @use '../../../../app/styles/vars.scss';
+@use '../../../../app/styles/mixins.scss';
 
 .wrapperSkeleton {
-    pointer-events: none;
+  @include mixins.liquid-glass($blur: 12px, $radius: 30px);
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.imgWrapperSkeleton {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 2 / 3;
-    margin-bottom: 8px;
-    border-radius: 10px;
-    background-color: vars.$color-surface;
-}
-
-.imgSkeleton {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
 
 .lineSkeleton {
+  @include mixins.liquid-glass($blur: 12px);
     height: 14px;
-    background-color: vars.$color-text-disabled;
     border-radius: vars.$border-rad;
 }
 
 
+
+.infoSkeletonWrapper {
+  display: flex;
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  flex-direction: column;
+
+}
+
 .shimmer {
   background: linear-gradient(
-    90deg,
+    135deg,
     #2a2a2c 25%,
     #333336 50%,
     #2a2a2c 75%
   );
   background-size: 200% 100%;
-  animation: loadingShimmer 1.5s infinite linear;
+  animation: loadingShimmer 4s infinite linear;
 }
 
 @keyframes loadingShimmer {
